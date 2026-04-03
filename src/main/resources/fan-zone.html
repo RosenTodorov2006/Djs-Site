@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megapod | Фен Зона</title>
+    <link rel="shortcut icon" href="./img/download.jpg" type="image/x-icon">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="shortcut icon" href="./img/download.jpg" type="image/x-icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #080808;
+            color: #ffffff;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Header Match */
+        .header-placeholder {
+            background: #111;
+            padding: 20px 0;
+            border-bottom: 1px solid #222;
+        }
+
+        /* Main Section */
+        .merch-hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #080808 0%, #150a21 100%);
+        }
+
+        .merch-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            width: 100%;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .merch-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            position: relative;
+        }
+
+        .merch-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(0, 191, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .merch-image img:hover {
+            transform: scale(1.02);
+        }
+
+        .merch-badge {
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: #00bfff;
+            color: #000;
+            padding: 5px 15px;
+            font-weight: 800;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .merch-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .merch-info h1 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .merch-info h2 {
+            color: #00bfff;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .merch-description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 35px;
+        }
+
+        /* Call Section */
+        .call-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #00bfff;
+        }
+
+        .call-box p {
+            margin: 0;
+            font-size: 16px;
+            color: #aaa;
+        }
+
+        .phone-number {
+            display: block;
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: color 0.3s;
+        }
+
+        .phone-number:hover {
+            color: #00bfff;
+        }
+
+        .phone-number i {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .merch-hero { padding: 30px 10px; }
+            .merch-info h1 { font-size: 32px; }
+            .merch-container { text-align: center; }
+            .call-box { border-left: none; border-top: 5px solid #00bfff; }
+            .merch-image img { max-width: 80%; }
+        }
+
+        /* Footer Copy */
+        .footer { background: #080808; padding: 40px 0; border-top: 1px solid #222; }
+        .footer__social a { color: #fff; margin-left: 15px; font-size: 20px; }
+    </style>
+</head>
+
+<body>
+<div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__search">
+            <form action="#">
+                <input type="text" placeholder="Search and hit enter...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__social">
+            <a href="https://www.facebook.com/profile.php?id=61572389022825"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@djdmt_djulien?_t=ZN-8zQj4R1960N&amp;_r=1"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/djdmt_djulien"><i class="fab fa-instagram"></i></a>
+            <a href="https://revolut.me/danieltanev13"><i class="fas fa-money-bill"></i></a>
+            <a href="#"><i class="fas fa-credit-card"></i></a>
+        </div>
+        </div>
+    </div>
+   <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                                                         <li class="active"><a href="./index.html">Начало</a></li>
+ <li><a href="./about.html">За нас</a></li>
+<li><a href="#">Фен артикули</a>
+    <ul class="dropdown">
+        <li><a href="./about.html">Тениски</a></li>
+    </ul>
+</li>
+<li><a href="./contact.html">Контакт</a></li>
+<li><a href="./music.html">Музика</a></li>
+                    </nav>
+                </div>
+                <div class="col-lg-4">
+                    <div class="header__right">
+                        <div class="header__right__social">
+                            <a href="https://www.instagram.com/djdmt_djulien"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61572389022825"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.tiktok.com/@djdmt_djulien?_t=ZN-8zQj4R1960N&_r=1"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://revolut.me/danieltanev13"><i class="fas fa-money-bill"></i></a>                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+
+    <main class="merch-hero">
+        <div class="merch-container">
+            <div class="merch-image">
+                <span class="merch-badge">Лимитирана серия</span>
+                <img src="/img/tshirt.jfif" alt="Megapod Limited T-Shirt">
+                </div>
+
+            <div class="merch-info">
+                <h1>BASS IN YOUR FACE</h1>
+                <h2>Official DJ Merch 2026</h2>
+                
+                <div class="merch-description">
+                    <p>Стани част от нашето семейство с нашата ексклузивна тениска. 
+                    Висококачествен памук, модерен дизайн и лого, което свети под клубните светлини. 
+                    Създадена за тези, които не спират да танцуват.</p>
+                    <p>• 100% Премиум памук<br>
+                       • Доставка до цялата страна</p>
+                </div>
+
+                <div class="call-box">
+                    <p>При интерес за поръчка, обадете се на:</p>
+                    <a href="tel:+3598XXXXXXXX" class="phone-number">
+                        <i class="fa fa-phone"></i> +359 8XX XXX XXX
+                    </a>
+                    <p style="margin-top: 10px; font-size: 14px; font-style: italic;">
+                        * Поръчки се приемат по всяко време.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-9 col-md-9">
+                <div class="footer__widget">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                    <p class="footer__copyright__text">Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> 
+                        Всички права запазени | Дизайн и изработка: 
+                        <a href="#" target="_blank" style="color: #00bfff;">Rosen Todorov</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="footer__social text-right">
+                    <a href="https://www.facebook.com/profile.php?id=61572389022825"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@djdmt_djulien?_t=ZN-8zQj4R1960N&amp;_r=1"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/djdmt_djulien"><i class="fab fa-instagram"></i></a>
+            <a href="https://revolut.me/danieltanev13"><i class="fas fa-money-bill"></i></a>
+            <a href="#"><i class="fas fa-credit-card"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

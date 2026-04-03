@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="MEGAPOD DJ Newsroom Submission">
+    <meta name="keywords" content="Megapod, dj, news, submission">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Megapod | DJ Newsroom</title>
+    <link rel="shortcut icon" href="./img/download.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        .news-hero {
+            padding-top: 250px;
+            padding-bottom: 140px;
+            background: radial-gradient(circle at 20% 20%, rgba(111, 66, 255, 0.35), transparent 40%), radial-gradient(circle at 80% 30%, rgba(0, 196, 255, 0.3), transparent 42%), #07070e;
+        }
+        .news-hero__text ul {
+            margin-bottom: 16px;
+        }
+        .news-hero__text ul li {
+            color: #d7dbff;
+            font-size: 15px;
+            display: inline-block;
+            margin-right: 26px;
+            list-style: none;
+        }
+        .news-hero__text ul li i {
+            color: #6f84ff;
+            margin-right: 6px;
+        }
+        .news-hero__text h2 {
+            color: #ffffff;
+            font-size: 58px;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+        .news-hero__text p {
+            color: #c2c8ff;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+        .newsroom {
+            background: linear-gradient(180deg, #07070e 0%, #0d0c1d 100%);
+            padding-bottom: 160px;
+        }
+        .newsroom__panel {
+            background: rgba(9, 10, 26, 0.85);
+            border: 1px solid rgba(99, 102, 241, 0.45);
+            border-radius: 18px;
+            padding: 44px;
+            box-shadow: 0 0 0 1px rgba(0, 183, 255, 0.2), 0 0 36px rgba(94, 66, 255, 0.25);
+            backdrop-filter: blur(4px);
+        }
+        .newsroom__title {
+            color: #ffffff;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .newsroom__subtitle {
+            color: #abb3ff;
+            margin-bottom: 34px;
+        }
+        .newsroom__form .form-group {
+            margin-bottom: 24px;
+        }
+        .newsroom__form label {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #d9deff;
+            margin-bottom: 10px;
+        }
+        .newsroom__form input,
+        .newsroom__form select,
+        .newsroom__form textarea {
+            width: 100%;
+            background: rgba(7, 9, 23, 0.9);
+            border: 1px solid rgba(89, 104, 255, 0.55);
+            border-radius: 10px;
+            color: #f1f3ff;
+            padding: 14px 16px;
+            font-size: 15px;
+            transition: 0.25s ease;
+        }
+        .newsroom__form textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+        .newsroom__form input::placeholder,
+        .newsroom__form textarea::placeholder {
+            color: #93a0ff;
+        }
+        .newsroom__form input:focus,
+        .newsroom__form select:focus,
+        .newsroom__form textarea:focus {
+            border-color: #00d4ff;
+            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
+        }
+        .dropzone {
+            border: 1px dashed rgba(0, 212, 255, 0.72);
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(16, 24, 60, 0.65), rgba(38, 20, 71, 0.55));
+            padding: 30px 24px;
+            text-align: center;
+        }
+        .dropzone i {
+            font-size: 36px;
+            color: #6d79ff;
+            margin-bottom: 12px;
+        }
+        .dropzone p {
+            color: #dbe1ff;
+            margin-bottom: 14px;
+            font-size: 15px;
+        }
+        .dropzone input[type="file"] {
+            padding: 9px 12px;
+            background: rgba(13, 18, 46, 0.95);
+            border: 1px solid rgba(111, 130, 255, 0.75);
+            border-radius: 8px;
+            color: #cdd5ff;
+            display: inline-block;
+            width: auto;
+            max-width: 100%;
+        }
+        .newsroom__submit {
+            border: none;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #4f46e5 0%, #00c4ff 100%);
+            color: #ffffff;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 13px 30px;
+            box-shadow: 0 0 18px rgba(0, 196, 255, 0.35);
+            transition: 0.3s ease;
+        }
+        .newsroom__submit:hover {
+            filter: brightness(1.08);
+            transform: translateY(-1px);
+        }
+        @media only screen and (max-width: 767px) {
+            .news-hero {
+                padding-top: 220px;
+                padding-bottom: 105px;
+            }
+            .news-hero__text h2 {
+                font-size: 38px;
+            }
+            .newsroom__panel {
+                padding: 28px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__search">
+            <form action="#">
+                <input type="text" placeholder="Search and hit enter...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="img/logo.png" alt="Megapod logo"></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-pinterest"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt="Megapod logo"></a>
+                    </div>
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li><a href="./index.html">Начало</a></li>
+                            <li><a href="./about.html">За нас</a></li>
+                            <li class="active"><a href="./news.html">NEWS / НОВИНИ</a></li>
+                            <li><a href="./contact.html">Контакт</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-4">
+                    <div class="header__right">
+                        <div class="header__right__search">
+                            <form action="#">
+                                <input type="text" placeholder="Search and hit enter...">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="header__right__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+    <main>
+        <section class="news-hero text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="news-hero__text">
+                            <ul>
+                                <li><i class="fa fa-headphones"></i>Creator Dashboard</li>
+                                <li><i class="fa fa-newspaper-o"></i>DJ Newsroom</li>
+                                <li><i class="fa fa-music"></i>Live Music Updates</li>
+                            </ul>
+                            <h2>Submit Fresh DJ News</h2>
+                            <p>Share events, new releases, and mixes with the MEGAPOD audience through a streamlined newsroom workflow built for music creators.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="newsroom spad">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <article class="newsroom__panel">
+                            <h3 class="newsroom__title">DJ Newsroom: Submit Your Update</h3>
+                            <p class="newsroom__subtitle">Publish official DJ announcements with artwork and streaming links in one place.</p>
+                            <form class="newsroom__form" action="#">
+                                <div class="form-group">
+                                    <label for="news-title"><i class="fa fa-vinyl"></i> News Title</label>
+                                    <input id="news-title" type="text" placeholder="Enter the headline for your update" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="news-category"><i class="fa fa-sliders"></i> Category</label>
+                                    <select id="news-category" required>
+                                        <option value="" selected disabled>Select a category</option>
+                                        <option value="event">Event</option>
+                                        <option value="new-release">New Release</option>
+                                        <option value="mix">Mix</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stream-link"><i class="fa fa-link"></i> SoundCloud/Spotify Link</label>
+                                    <input id="stream-link" type="url" placeholder="https://soundcloud.com/your-track or https://open.spotify.com/..." required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="news-body"><i class="fa fa-file-text-o"></i> News Copy</label>
+                                    <textarea id="news-body" placeholder="Write your newsroom update for fans and collaborators." required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="news-artwork"><i class="fa fa-image"></i> Poster / Artwork Upload</label>
+                                    <div class="dropzone">
+                                        <i class="fa fa-cloud-upload"></i>
+                                        <p>Drag and drop your event poster or release artwork here, or choose a file.</p>
+                                        <input id="news-artwork" type="file" accept="image/*">
+                                    </div>
+                                </div>
+                                <button type="submit" class="newsroom__submit">Publish to Newsroom</button>
+                            </form>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+        <div class="container">
+            <div class="footer__subscriber">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="footer__subscriber__text">
+                            <h3>Sign up for our newsletter!</h3>
+                            <p>Subscribe to receive info on our latest news and episodes</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 offset-lg-2">
+                        <form action="#" class="footer__subscriber__form">
+                            <input type="text" placeholder="Your email address">
+                            <button type="submit" class="site-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-9 col-md-9">
+                    <div class="footer__widget">
+                        <div class="footer__logo">
+                            <a href="#"><img src="img/logo.png" alt="Megapod logo"></a>
+                        </div>
+                        <p class="footer__copyright__text">Copyright ©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Hamza Ashfaq</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.jplayer.min.js"></script>
+    <script src="js/jplayerInit.js"></script>
+</body>
+</html>
