@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="bg" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,31 @@
     <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <style>
-        /* Footer центриране */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .header__logo img {
+            max-height: 42px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .offcanvas__logo img {
+            max-height: 45px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .footer__logo img {
+            max-height: 55px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
         .footer {
             padding: 10px 0;
             text-align: center;
@@ -45,6 +69,70 @@
             gap: 20px;
         }
 
+        @media (max-width: 1199px) {
+            .header__logo img {
+                max-height: 35px;
+            }
+        }
+        .error-message {
+            color: #e74c3c !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            text-align: left;
+            background-color: #fadbd8;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border-left: 4px solid #c0392b;
+        }
+
+        .contact__form input, .contact__form textarea {
+            margin-bottom: 5px !important;
+        }
+        .footer {
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .footer__widget {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer__copyright__text {
+            margin-top: 15px;
+            text-align: center !important;
+        }
+
+        .footer__social {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .alert {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
     </style>
 </head>
 
@@ -81,14 +169,14 @@
                 <nav class="header__menu mobile-menu">
                     <ul>
                         <li><a href="/">Начало</a></li>
-                        <li><a href="/about">За нас</a></li>
-                        <li><a href="#">Фен артикули</a>
+                        <li class="active"><a href="/about">За нас</a></li>
+                        <li><a href="/#parties">Партита</a></li>
+                        <li><a href="#">Мърч</a>
                             <ul class="dropdown">
                                 <li><a href="/fan-zone">Тениски</a></li>
                             </ul>
                         </li>
-                        <li class="active"><a href="/contact">Контакт</a></li>
-                        <li><a href="/music">Музика</a></li>
+                        <li><a href="/contact">Контакт</a></li>
                     </ul>
                 </nav>
             </div>
@@ -151,7 +239,7 @@
                 <div class="contact__widget__item">
                     <img src="/img/icons/ci-2.png" alt="">
                     <h4>Телефон</h4>
-                    <p>+359 8XX XXX XXX <span>Свържете се с нас</span></p>
+                    <p>+359 89 646 9874 <span>Свържете се с нас</span></p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -166,16 +254,31 @@
             <div class="col-lg-12">
                 <div class="contact__form">
                     <h2>Оставете съобщение</h2>
-                    <form action="#">
+
+                    <div th:if="${success}" class="alert alert-success">
+                        Вашето съобщение беше изпратено успешно!
+                    </div>
+                    <div th:if="${error}" class="alert alert-danger">
+                        Възникна грешка при изпращането на съобщението. Моля, опитайте отново.
+                    </div>
+
+                    <form th:action="@{/contact}" th:object="${contactMessage}" method="post">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <input type="text" placeholder="Вашето име">
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <input type="text" th:field="*{name}" placeholder="Вашето име" required>
+                                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error-message"></span>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <input type="text" placeholder="Вашият имейл">
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <input type="email" th:field="*{email}" placeholder="Вашият имейл" required>
+                                <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error-message"></span>
                             </div>
-                            <div class="col-lg-12 text-center">
-                                <textarea placeholder="Вашето съобщение"></textarea>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <input type="text" th:field="*{phone}" placeholder="Вашият телефон (по желание)">
+                                <span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" class="error-message"></span>
+                            </div>
+                            <div class="col-lg-12 text-center mt-3">
+                                <textarea th:field="*{message}" placeholder="Вашето съобщение" required></textarea>
+                                <span th:if="${#fields.hasErrors('message')}" th:errors="*{message}" class="error-message" style="text-align: center; border-left: none; border-top: 4px solid #c0392b;"></span>
                                 <button type="submit" class="site-btn">Изпрати съобщение</button>
                             </div>
                         </div>

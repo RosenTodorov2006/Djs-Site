@@ -21,6 +21,60 @@
     <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .header__logo img {
+            max-height: 42px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .offcanvas__logo img {
+            max-height: 45px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .footer__logo img {
+            max-height: 55px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .footer {
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .footer__widget {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer__copyright__text {
+            margin-top: 15px;
+            text-align: center !important;
+        }
+
+        .footer__social {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        @media (max-width: 1199px) {
+            .header__logo img {
+                max-height: 35px;
+            }
+        }
         /* Footer центриране */
         .footer {
             padding: 10px 0;
@@ -76,14 +130,14 @@
                 <nav class="header__menu mobile-menu">
                     <ul>
                         <li><a href="/">Начало</a></li>
-                        <li><a href="/about">За нас</a></li>
-                        <li><a href="#">Фен артикули</a>
+                        <li class="active"><a href="/about">За нас</a></li>
+                        <li><a href="/#parties">Партита</a></li>
+                        <li><a href="#">Мърч</a>
                             <ul class="dropdown">
                                 <li><a href="/fan-zone">Тениски</a></li>
                             </ul>
                         </li>
                         <li><a href="/contact">Контакт</a></li>
-                        <li class="active"><a href="/music">Музика</a></li>
                     </ul>
                 </nav>
             </div>

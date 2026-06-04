@@ -22,6 +22,60 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .header__logo img {
+            max-height: 42px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .offcanvas__logo img {
+            max-height: 45px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .footer__logo img {
+            max-height: 55px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .footer {
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .footer__widget {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer__copyright__text {
+            margin-top: 15px;
+            text-align: center !important;
+        }
+
+        .footer__social {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        @media (max-width: 1199px) {
+            .header__logo img {
+                max-height: 35px;
+            }
+        }
         body {
             font-family: 'Nunito', sans-serif;
             background-color: #080808;
@@ -67,18 +121,17 @@
             transform: scale(1.02);
         }
 
-        /* Намален наполовина Badge */
         .merch-badge {
             position: absolute;
             top: 12px;
             left: 25px;
             background: #00bfff;
             color: #000;
-            padding: 2px 8px; /* Намален отстъп */
+            padding: 2px 8px;
             font-weight: 900;
             border-radius: 4px;
             text-transform: uppercase;
-            font-size: 9px; /* Намален шрифт */
+            font-size: 9px;
             letter-spacing: 0.5px;
             z-index: 10;
         }
@@ -99,7 +152,28 @@
         .merch-info h2 {
             color: #00bfff;
             font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .drop-alert {
+            display: inline-block;
+            background: rgba(0, 191, 255, 0.1);
+            color: #00bfff;
+            border: 1px solid #00bfff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 25px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 191, 255, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 191, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 191, 255, 0); }
         }
 
         .merch-description {
@@ -137,7 +211,6 @@
             text-decoration: none;
         }
 
-        /* Footer центриране */
         .footer {
             padding: 10px 0;
             text-align: center;
@@ -199,14 +272,14 @@
                 <nav class="header__menu mobile-menu">
                     <ul>
                         <li><a href="/">Начало</a></li>
-                        <li><a href="/about">За нас</a></li>
-                        <li class="active"><a href="#">Фен артикули</a>
+                        <li class="active"><a href="/about">За нас</a></li>
+                        <li><a href="/#parties">Партита</a></li>
+                        <li><a href="#">Мърч</a>
                             <ul class="dropdown">
                                 <li><a href="/fan-zone">Тениски</a></li>
                             </ul>
                         </li>
                         <li><a href="/contact">Контакт</a></li>
-                        <li><a href="/music">Музика</a></li>
                     </ul>
                 </nav>
             </div>
@@ -235,6 +308,10 @@
             <h1>BASS IN YOUR FACE</h1>
             <h2>Official DJ Merch 2026</h2>
 
+            <div class="drop-alert">
+                <i class="fa fa-fire"></i> Drop Coming Soon
+            </div>
+
             <div class="merch-description">
                 <p>Стани част от нашето семейство с нашата ексклузивна тениска.
                     Висококачествен памук, модерен дизайн и лого, което свети под клубните светлини.
@@ -246,7 +323,7 @@
             <div class="call-box">
                 <p>При интерес за поръчка, обадете се на:</p>
                 <a href="tel:+3598XXXXXXXX" class="phone-number">
-                    <i class="fa fa-phone"></i> +359 8XX XXX XXX
+                    <i class="fa fa-phone"></i> +359 89 646 9874
                 </a>
                 <p style="margin-top: 10px; font-size: 14px; font-style: italic;">
                     * Поръчки се приемат по всяко време.

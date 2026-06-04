@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Megapod | Template</title>
-    <link rel="shortcut icon" href="/img/download.jpg" type="image/x-icon">
+    <link class="shortcut icon" href="/img/download.jpg" type="image/x-icon">
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -20,7 +20,31 @@
     <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <style>
-        /* Footer центриране */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .header__logo img {
+            max-height: 42px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .offcanvas__logo img {
+            max-height: 45px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .footer__logo img {
+            max-height: 55px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
         .footer {
             padding: 10px 0;
             text-align: center;
@@ -43,6 +67,12 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+        }
+
+        @media (max-width: 1199px) {
+            .header__logo img {
+                max-height: 35px;
+            }
         }
     </style>
 </head>
@@ -82,15 +112,15 @@
                 </div>
                 <nav class="header__menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="/">Начало</a></li>
-                        <li><a href="/about">За нас</a></li>
-                        <li><a href="#">Фен артикули</a>
+                        <li><a href="/">Начало</a></li>
+                        <li class="active"><a href="/about">За нас</a></li>
+                        <li><a href="/#parties">Партита</a></li>
+                        <li><a href="#">Мърч</a>
                             <ul class="dropdown">
                                 <li><a href="/fan-zone">Тениски</a></li>
                             </ul>
                         </li>
                         <li><a href="/contact">Контакт</a></li>
-                        <li><a href="/music">Музика</a></li>
                     </ul>
                 </nav>
             </div>
@@ -109,7 +139,7 @@
     </div>
 </header>
 
-<section class="hero spad set-bg" data-setbg="/img/main.jpg">
+<section class="hero spad set-bg" data-setbg="/img/dj_wall.png">
     <div class="container">
         <div class="row">
             <div class="col-lg-6"></div>
@@ -137,7 +167,7 @@
     </div>
 </section>
 
-<section class="episodes spad">
+<section id="parties" class="episodes spad">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -172,7 +202,7 @@
                     <div class="tags"><span class="icon_tags_alt"></span> Равда</div>
                     <div class="time"><span class="icon_clock_alt"></span> 4 часа</div>
                     <div class="episodes__text">
-                        <h4 style="color: aliceblue !important; background: rgba(0, 0, 0, 0.6); padding: 8px 12px; border-radius: 4px; display: inline-block;">Абитуриентски бал</h4>
+                        <h4 style="color: aliceblue !important; background: rgba(0, 0, 0, 0.6); padding: 8px 12px; border-radius: 4px; display: inline-block;">Фирмено парти</h4>
                         <p><span class="icon_calendar"></span> 23 май 2025</p>
                     </div>
                 </div>
