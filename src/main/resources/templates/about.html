@@ -24,6 +24,11 @@
             scroll-behavior: smooth;
         }
 
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+        }
+
         .header__logo img {
             max-height: 42px;
             width: auto;
@@ -45,10 +50,13 @@
             display: block;
         }
 
-        /* Footer центриране */
         .footer {
-            padding: 10px 0;
+            padding: 30px 0 20px 0 !important;
             text-align: center;
+            background-color: #080808;
+            background-image: url('/img/footer-bg.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
         .footer__widget {
@@ -61,6 +69,7 @@
         .footer__copyright__text {
             margin-top: 15px;
             text-align: center !important;
+            color: #ccc;
         }
 
         .footer__social {
@@ -70,9 +79,100 @@
             gap: 20px;
         }
 
+        .about {
+            background-color: transparent;
+        }
+
+        .about__text h2 {
+            color: #ffffff;
+        }
+
+        .about__item h6 {
+            color: #00bfff;
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .about__item p {
+            color: #b7b7b7;
+            line-height: 1.8;
+        }
+
+        .team {
+            background-color: transparent;
+        }
+
+        .team__item {
+            text-align: center;
+            margin-bottom: 30px;
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .team__item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .team__item h4 {
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .team__item span {
+            color: #00bfff;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
         @media (max-width: 1199px) {
             .header__logo img {
                 max-height: 35px;
+            }
+        }
+
+        /* --- Респонсив стилове за телефони --- */
+        @media (max-width: 767px) {
+            .spad {
+                padding-top: 50px !important;
+                padding-bottom: 50px !important;
+            }
+
+            .breadcrumb-option {
+                padding: 40px 0 !important;
+            }
+
+            .breadcrumb__text h2 {
+                font-size: 32px !important;
+            }
+
+            .about__text h2 {
+                font-size: 2.5em !important;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .about__item {
+                text-align: center;
+                margin-bottom: 40px;
+                padding: 0 15px;
+            }
+
+            .about__pic img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+
+            .footer {
+                background-image: none !important;
+                background-color: #080808 !important;
+                padding: 40px 15px 20px 15px !important;
             }
         }
     </style>
@@ -177,10 +277,10 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
+        <div class="row mt-4">
+            <div class="col-lg-12 text-center">
                 <div class="about__pic">
-                    <img src="/img/nnnn.jpg" alt="">
+                    <img src="/img/nnnn.jpg" alt="DJ DMT & DJ JULIEN" style="max-width: 100%; border-radius: 10px;">
                 </div>
             </div>
         </div>
@@ -189,17 +289,17 @@
 
 <section class="team spad">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="team__item">
-                    <img src="/img/aaa.jpg" alt="">
+                    <img src="/img/aaa.jpg" alt="Даниел Тенев">
                     <h4>Даниел Тенев</h4>
                     <span>DJ</span>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="team__item">
-                    <img src="/img/bbb.jpg" alt="">
+                    <img src="/img/bbb.jpg" alt="Жулиен Лимберов">
                     <h4>Жулиен Лимберов</h4>
                     <span>DJ</span>
                 </div>
@@ -247,6 +347,22 @@
 <script src="/js/main.js"></script>
 <script src="/js/jquery.jplayer.min.js"></script>
 <script src="/js/jplayerInit.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.header__menu ul li').removeClass('active');
+        var currentPage = window.location.pathname;
+        if (currentPage === '/' || currentPage === '/index.html') {
+            $('.header__menu ul li a[href="/"]').parent().addClass('active');
+        } else {
+            $('.header__menu ul li a').each(function() {
+                if ($(this).attr('href') === currentPage) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        }
+    });
+</script>
 </body>
 
 </html>

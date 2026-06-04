@@ -24,6 +24,11 @@
             scroll-behavior: smooth;
         }
 
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+        }
+
         .header__logo img {
             max-height: 42px;
             width: auto;
@@ -46,8 +51,12 @@
         }
 
         .footer {
-            padding: 10px 0;
+            padding: 30px 0 20px 0 !important;
             text-align: center;
+            background-color: #080808;
+            background-image: url('/img/footer-bg.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
         .footer__widget {
@@ -60,6 +69,7 @@
         .footer__copyright__text {
             margin-top: 15px;
             text-align: center !important;
+            color: #ccc;
         }
 
         .footer__social {
@@ -69,11 +79,18 @@
             gap: 20px;
         }
 
-        @media (max-width: 1199px) {
-            .header__logo img {
-                max-height: 35px;
-            }
+        .contact__widget__item h4 {
+            color: #ffffff;
         }
+
+        .contact__widget__item p {
+            color: #b7b7b7;
+        }
+
+        .contact__form h2 {
+            color: #ffffff;
+        }
+
         .error-message {
             color: #e74c3c !important;
             font-size: 14px !important;
@@ -90,29 +107,6 @@
 
         .contact__form input, .contact__form textarea {
             margin-bottom: 5px !important;
-        }
-        .footer {
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .footer__widget {
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .footer__copyright__text {
-            margin-top: 15px;
-            text-align: center !important;
-        }
-
-        .footer__social {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
         }
 
         .alert {
@@ -132,6 +126,37 @@
             background-color: #f8d7da;
             color: #721c24;
             border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 1199px) {
+            .header__logo img {
+                max-height: 35px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .spad {
+                padding-top: 50px !important;
+                padding-bottom: 50px !important;
+            }
+
+            .breadcrumb-option {
+                padding: 40px 0 !important;
+            }
+
+            .breadcrumb__text h2 {
+                font-size: 32px !important;
+            }
+
+            .contact__widget__item {
+                margin-bottom: 30px;
+            }
+
+            .footer {
+                background-image: none !important;
+                background-color: #080808 !important;
+                padding: 40px 15px 20px 15px !important;
+            }
         }
     </style>
 </head>
@@ -169,14 +194,14 @@
                 <nav class="header__menu mobile-menu">
                     <ul>
                         <li><a href="/">Начало</a></li>
-                        <li class="active"><a href="/about">За нас</a></li>
+                        <li><a href="/about">За нас</a></li>
                         <li><a href="/#parties">Партита</a></li>
                         <li><a href="#">Мърч</a>
                             <ul class="dropdown">
                                 <li><a href="/fan-zone">Тениски</a></li>
                             </ul>
                         </li>
-                        <li><a href="/contact">Контакт</a></li>
+                        <li class="active"><a href="/contact">Контакт</a></li>
                     </ul>
                 </nav>
             </div>
